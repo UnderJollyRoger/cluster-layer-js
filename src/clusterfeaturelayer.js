@@ -1,3 +1,4 @@
+/* eslint-disable */
 define([
     'dojo/_base/declare',
     'dojo/_base/array',
@@ -453,6 +454,7 @@ define([
             if (this.url) {
                 var ext = extent || this._map.extent;
                 this._query.objectIds = null;
+                this._query.orderByFields = ["CreationDate DESC"];
                 if (this._where) {
                     this._query.where = this._where;
                 }
@@ -473,7 +475,10 @@ define([
         },
 
         _onIdsReturned: function (results) {
+            results = results.slice(0,500);
+
             this.emit('ids-returned',{results: results});
+
             var uncached = difference(results, this._objectIdCache.length, this._objectIdHash);
             this._objectIdCache = concat(this._objectIdCache, uncached);
             if (uncached && uncached.length) {
