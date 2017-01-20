@@ -193,7 +193,7 @@ define([
             // symbol for single graphics
             //this._singleSym = options.singleSymbol || new SimpleMarkerSymbol('circle', 6, null, new Color('#888'));
             this._singleSym = options.singleSymbol || new SimpleMarkerSymbol('circle', 16,
-                                    new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([85, 125, 140, 1]), 3),
+                                    new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([140,179,36, 1]), 3),
                                     new Color([255, 255, 255, 1]));
             this._singleTemplate = options.singleTemplate || new PopupTemplate({ 'title': '', 'description': '{*}' });
             this._disablePopup = options.disablePopup || false;
@@ -400,17 +400,17 @@ define([
 
                                 // Blue clusters
                                 small = new SimpleMarkerSymbol('circle', 25,
-                                            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([140,177,210,0.35]), 15),
-                                            new Color([140,177,210,0.75]));
+                                            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([165, 205,57,0.35]), 15),
+                                            new Color([165, 205,57,0.75]));
                                 medium = new SimpleMarkerSymbol('circle', 50,
-                                            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([97,147,179,0.35]), 15),
-                                            new Color([97,147,179,0.75]));
+                                            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([165, 205,57,0.35]), 15),
+                                            new Color([165, 205,57,0.75]));
                                 large = new SimpleMarkerSymbol('circle', 80,
-                                            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([59,110,128,0.35]), 15),
-                                            new Color([59,110,128,0.75]));
+                                            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([165, 205,57,0.35]), 15),
+                                            new Color([165, 205,57,0.75]));
                                 xlarge = new SimpleMarkerSymbol('circle', 110,
-                                            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([20,72,77,0.35]), 15),
-                                            new Color([20,72,77,0.75]));
+                                            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([165, 205,57,0.35]), 15),
+                                            new Color([165, 205,57,0.75]));
 
                                 renderer.addBreak(2, 10, small);
                                 renderer.addBreak(10, 25, medium);
