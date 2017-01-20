@@ -475,7 +475,7 @@ define([
         },
 
         _onIdsReturned: function (results) {
-            results = results.slice(0,500);
+            results = results.slice(0,500).reverse();
 
             this.emit('ids-returned',{results: results});
 
