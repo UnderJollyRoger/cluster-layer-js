@@ -453,6 +453,7 @@ define([
             if (this.url) {
                 var ext = extent || this._map.extent;
                 this._query.objectIds = null;
+                this._query.orderByFields = ["Name DESC"];
                 if (this._where) {
                     this._query.where = this._where;
                 }
